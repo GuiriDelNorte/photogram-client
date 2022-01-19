@@ -19,7 +19,7 @@ interface IProps {
     }
 }
 
-const postComponent: React.FC<IProps> = ({postData}) => {
+const PostComponent: React.FC<IProps> = ({postData}) => {
     const [name, setName] = React.useState<string>('')
     const [avatarUrl, setAvatarUrl] = React.useState<string>('')
     const [profileUrl, setProfileUrl] = React.useState<string>('')
@@ -123,6 +123,6 @@ const postComponent: React.FC<IProps> = ({postData}) => {
     )
 }
 
-export default postComponent
+export default PostComponent
 
 

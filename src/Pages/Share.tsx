@@ -68,8 +68,7 @@ const SharePost: React.FC<{}> = props => {
               imageUrl: postImageUrl,
               postUrl: `/post/${postId}`,
               description: subjectTitle.current,
-              likes: 0,
-
+              likes: []
             })
             const timer = setTimeout(() => {
                 setLoading(false)
