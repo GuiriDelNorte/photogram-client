@@ -3,6 +3,7 @@ import React from 'react'
 import PostsComponent from '../Components/Posts'
 import NewPost from '../Components/NewPost';
 import { db } from '../Config/firebase';
+import { useHistory } from 'react-router-dom';
 
 
 
@@ -13,12 +14,13 @@ interface IState {
       firstName: string,
       lastName: string,
       likes: number,
-      description: string
+      description: string,
+      postUrl: string,
     }[]  
 }
 
 const ExploreFeed: React.FC<{}> = props => {
-
+    const history = useHistory()
     const [posts, setPosts] = React.useState<IState["posts"]>([])
     const [loading, setLoading] = React.useState<boolean>(true)
   
@@ -51,6 +53,7 @@ const ExploreFeed: React.FC<{}> = props => {
                     return(
                       <div className="pics" key={index}>
                         <img
+                          onClick={() => history.push(post.postUrl)}
                           className="roundedImages"
                           style={{width: '100%'}}
                           src={post.imageUrl} 

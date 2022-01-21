@@ -20,7 +20,8 @@ interface IState {
       firstName: string,
       lastName: string,
       likes: number,
-      description: string
+      description: string,
+      postUrl: string
     }[]  
 }
 
@@ -197,6 +198,7 @@ const ProfilePage: React.FC<{}> = props => {
                                 className=""
                                 style={{width: '100%'}}
                                 src={post.imageUrl} 
+                                onClick={() => history.push(post.postUrl)}
                                 />
                             </div>
                             )

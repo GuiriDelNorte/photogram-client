@@ -63,7 +63,7 @@ const HeaderNav:React.FC<{}> = (props) => {
     const [webNav] = React.useState(WebNavData)
     const classes = useStyles();
     let location = useLocation();
-        if (location.pathname.match(/login/) || location.pathname.match(/register/) || location.pathname.match(/create-account/) || location.pathname.match(/reset/) || location.pathname.match(/change-password/)) {
+        if (location.pathname.match(/login/) || location.pathname.match(/register/) || location.pathname.match(/post/) || location.pathname.match(/create-account/) || location.pathname.match(/reset/) || location.pathname.match(/change-password/)) {
             return null;
         } else {
             return (

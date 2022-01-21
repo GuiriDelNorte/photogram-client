@@ -9,6 +9,7 @@ import ChangePassword from "../Pages/ChangePassword";
 import ProfilePage from "../Pages/Profile";
 import ResetPasswordPage from "../Pages/ResetPassword";
 import SharePost from "../Pages/Share";
+import PostPage from "../Pages/PostPage";
 
 
 const routes: IRoute[] = [
@@ -70,6 +71,12 @@ const routes: IRoute[] = [
         path: '/profile',
         exact: true,
         component: ProfilePage,
+        protected: true
+    },
+    {
+        path: '/post/:postId',
+        exact: true,
+        component: PostPage,
         protected: true
     },
 
