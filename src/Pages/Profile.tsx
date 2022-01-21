@@ -195,7 +195,7 @@ const ProfilePage: React.FC<{}> = props => {
                             return(
                             <div className="pics" key={index}>
                                 <img
-                                className=""
+                                className="roundedImages"
                                 style={{width: '100%'}}
                                 src={post.imageUrl} 
                                 onClick={() => history.push(post.postUrl)}
