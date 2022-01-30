@@ -7,7 +7,7 @@ import IconButton from '@material-ui/core/IconButton';
 // Firebase
 import { db } from '../Config/firebase'
 // React router
-import { Link } from 'react-router-dom'
+import { Link, useHistory } from 'react-router-dom'
 
 
 interface IProps {
@@ -20,6 +20,7 @@ interface IProps {
 }
 
 const PostComponent: React.FC<IProps> = ({postData}) => {
+    const history = useHistory()
     const [name, setName] = React.useState<string>('')
     const [avatarUrl, setAvatarUrl] = React.useState<string>('')
     const [profileUrl, setProfileUrl] = React.useState<string>('')
@@ -67,7 +68,7 @@ const PostComponent: React.FC<IProps> = ({postData}) => {
     return (
         <Grow in={loading === false}>
             <div /* className={zoom ? "post2" : "post"} */ className="post">
-                <div className="row alignCenter userBox">
+                <div onClick={() => history.push(profileUrl)} className="row alignCenter userBox">
                     <img
                     className="profileImage" 
                     src={avatarUrl}
@@ -110,7 +111,7 @@ const PostComponent: React.FC<IProps> = ({postData}) => {
                     marginBottom: '2px'
                 }}>
                     <div style={{marginLeft: '5px', marginRight: '5px'}}>
-                        <Link to={profileUrl} style={{textDecoration: 'none', color: '#111111'}}>
+                        <Link to={profileUrl} style={{color: '#111111'}} className='linkHover'>
                             <span className="username" style={{marginLeft: '-1px'}}>{name}</span>
                         </Link>
                         <span className="description">{postData.description}</span>

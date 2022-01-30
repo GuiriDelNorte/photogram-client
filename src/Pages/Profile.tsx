@@ -131,22 +131,22 @@ const ProfilePage: React.FC<{}> = props => {
                         src={avatarUrl} 
                     />
                     <div style={flex} className="paddingItems flexGrow centerMobile">
-                        <div style={{textAlign: 'center'}}>
+                        <div className="ProfileMetrics">
                             <b>{posts.length}</b>
                             <div className="smallText">posts</div>
                         </div>
-                        <div style={{marginLeft: '20px', textAlign: 'center'}}>
+                        <div className="ProfileMetrics" style={{marginLeft: '20px'}}>
                             <b>{followers.length}</b> 
                             <div className="smallText">followers</div>
                         </div>
-                        <div style={{marginLeft: '20px', textAlign: 'center'}}>
+                        <div className="ProfileMetrics" style={{marginLeft: '20px'}}>
                             <b>{following.length}</b> 
                             <div className="smallText">following</div>
                         </div>
 
                         <div style={flex2} className="displayWeb">
-                            <Link to="/profile/edit" style={{textDecoration:'none', color: '#111111'}} className="">
-                                <div style={{marginTop: '15px', width: '100%', textAlign: 'center',}} className="editProfileBtn">
+                            <Link to="/profile/edit" style={{textDecoration:'none', color: '#111111', alignItems: 'center'}} className="">
+                                <div style={{marginTop: '15px', width: '100%', textAlign: 'center', fontSize: '13px'}} className="editProfileBtn">
                                     Edit profile
                                 </div>
                             </Link>
@@ -216,10 +216,6 @@ const flex = {
     display: 'flex',
     alignItems: 'center',
     marginTop: '-15px'
-}
-
-const userName = {
-    fontSize: '18px',
 }
 
 const flex1 = {

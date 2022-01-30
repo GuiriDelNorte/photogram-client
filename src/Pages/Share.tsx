@@ -195,7 +195,7 @@ const SharePost: React.FC<{}> = props => {
                         <div onClick={handlePostSubmit} className="editProfileBtn" style={{
                             margin: '-10px 0  10px 0',
                             cursor: 'pointer',
-                            textAlign: 'center'
+                            justifyContent: 'center'
                         }}>
                             Publish
                         </div>

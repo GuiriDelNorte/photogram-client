@@ -64,7 +64,7 @@ const PostPage: React.FC<{}> = props => {
                         <AiOutlineArrowLeft style={{color: '#111111', height: '25px'}}/>
                     </IconButton >
             </div>
-        </header>
+          </header>
         
           <div className="center backgroundColor">
               <div className="maxWidth800 padding">

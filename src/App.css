@@ -66,6 +66,7 @@
     width: 100vw;
     display: flex;
     justify-content: flex-start;
+    margin-right: -15px !important;
 }
 
 
@@ -145,6 +146,9 @@
     margin-top: 20px;
     font-weight: 400;
     flex-grow: 1;
+    display: flex;
+    align-items: center;
+    
 }
 
 .flexGrow {
@@ -171,7 +175,6 @@
 }
 
 .smallText {
-    font-size: 14px;
     font-weight: 400;
     color: #474747
 }
@@ -238,8 +241,21 @@
     background-color: var(--lightgrey);
 }
 
+.zIndex {
+    z-index: 1000 !important;
+}
+
 
 @media only screen and (max-width: 840px) {
+
+    .editProfileBtn {
+        
+       
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        
+    }
     
     .centerMobile {
         width: 100vw;
@@ -451,6 +467,14 @@
     width: 100%;
 }
 
+.linkHover {
+    text-decoration: none;
+}
+
+.linkHover:hover {
+    text-decoration: underline;
+}
+
 @media only screen and (max-width: 840px) {
     .image {
         width: 100%;
@@ -461,6 +485,7 @@
 .userBox {
     width: 100%;
     padding: 10px;
+    cursor: pointer;
 }
 
 .buttonBox {
@@ -513,10 +538,24 @@
     padding-bottom: 0;
 }
 
-
+.ProfileMetrics {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    gap: 8px;
+    font-size: 18px;
+}
 
 
 @media only screen and (max-width: 840px) {
+    .ProfileMetrics {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        gap: 0;
+        font-size: 15px;
+    }
+    
     .webNav {
         display: none;
     }
@@ -606,7 +645,7 @@
         -webkit-transition: all 350ms ease;
         transition: all 350ms ease;
         cursor: pointer;
-        margin-bottom: -3px;
+        margin-bottom: -4px;
     }
 }
 
